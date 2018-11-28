@@ -1,0 +1,79 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-eslint-rules"
+  ],
+  "linterOptions": {
+    "typeCheck": true
+  },
+  "rules": {
+    "adjacent-overload-signatures": true,
+    "array-type": [
+      true,
+      "generic"
+    ],
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "static-field",
+          "static-method",
+          "instance-field",
+          "constructor",
+          "instance-method"
+        ]
+      }
+    ],
+    "no-implicit-dependencies": [
+      true,
+      [
+        "@storybook/react"
+      ]
+    ],
+    "no-namespace": [
+      true,
+      "allow-declarations"
+    ],
+    "ordered-imports": true,
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double"
+    ],
+    "semicolon": [
+      true,
+      "always",
+      "strict-bound-class-methods"
+    ],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": {
+          "arrays": "always",
+          "functions": "never",
+          "objects": "always",
+          "typeLiterals": "always"
+        }
+      }
+    ],
+    "typedef": [
+      true,
+      "array-destructuring",
+      "arrow-call-signature",
+      "arrow-parameter",
+      "call-signature",
+      "member-variable-declaration",
+      "object-destructuring",
+      "parameter",
+      "property-declaration",
+      "variable-declaration"
+    ]
+  },
+  "rulesDirectory": []
+}
