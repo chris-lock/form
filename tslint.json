@@ -33,6 +33,7 @@
     "no-implicit-dependencies": [
       true,
       [
+        "@storybook/addon-actions",
         "@storybook/react"
       ]
     ],

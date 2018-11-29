@@ -3,6 +3,10 @@
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "keyofStringsOnly": true,
+    "lib": [
+      "dom",
+      "es2015"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
     "noErrorTruncation": true,
