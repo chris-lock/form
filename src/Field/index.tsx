@@ -1,11 +1,13 @@
 import React from 'react';
 import {
-  FormValue,
+  FormContext,
 } from '../Form';
 
-export interface FieldProps {
+export interface FieldProps
+extends FormContext {
   name: string;
-  onUpdate(name: string, value: FormValue): void;
+  className?: string;
+  required?: boolean;
 }
 
 export interface FieldState {
@@ -14,8 +16,9 @@ export interface FieldState {
   value: string;
 }
 
-export default abstract class Field extends React.Component<FieldProps, FieldState> {
-  public state: Readonly<FieldState> = {
+export default abstract class Field<Props extends FieldProps>
+extends React.Component<Props, FieldState> {
+  public readonly state: Readonly<FieldState> = {
     error: '',
     valid: false,
     value: '',

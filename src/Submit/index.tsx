@@ -1,5 +1,4 @@
-// import Form from '../Form';
+import Form from '../Form';
 import Submit from './Submit';
 
-// export default Form.withContext(Submit);
-export default Submit;
+export default Form.withContext(Submit);
