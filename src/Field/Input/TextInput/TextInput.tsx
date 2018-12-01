@@ -11,19 +11,25 @@ extends InputProps {
   maxLength?: number;
   minLength?: number;
 }
+export default class TextInput<Props extends TextInputProps>
+extends Input<Props> {
+  constructor(props: Props) {
+    super(props);
+  }
 
-// Why no work?
-// export default class TextInput<Props extends TextInputProps = TextInputProps>
-// extends Input<Props> {
-export default class TextInput<Props extends TextInputProps = TextInputProps>
-extends Input<TextInputProps> {
-  public render(): React.ReactElement<Props> {
+  public render(): React.ReactElement<{}> {
     return (
       <input
+        autoCapitalize={this.props.autoCapitalize}
+        autoComplete={this.props.autoComplete}
+        autoCorrect={this.props.autoCorrect}
         className={this.props.className}
         disabled={this.props.disabled}
+        maxLength={this.props.maxLength}
         name={this.props.name}
         onChange={this.onChange}
+        placeholder={this.props.placeholder}
+        tabIndex={this.props.tabIndex}
         value={this.state.value}
       />
     );

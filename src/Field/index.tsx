@@ -8,6 +8,7 @@ extends FormContext {
   name: string;
   className?: string;
   required?: boolean;
+  tabIndex?: number;
 }
 
 export interface FieldState {
@@ -23,6 +24,24 @@ extends React.Component<Props, FieldState> {
     valid: false,
     value: '',
   };
+
+  public componentDidMount(): void {
+    this.props.validationRegister(this);
+  }
+
+  public componentWillReceiveProps(nextProps: FieldProps): void {
+    if (nextProps.validating && !this.props.validating) {
+      this.validate();
+    }
+  }
+
+  protected validate(): void {
+    this.validationCompleted();
+  }
+
+  protected validationCompleted(): void {
+    this.props.validationCompleted(this);
+  }
 
   public updateValue(value: string): void {
     this.setState({

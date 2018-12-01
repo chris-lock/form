@@ -2,13 +2,11 @@ import React, {
   Context,
 } from 'react';
 
-// Diff / Omit taken from https://github.com/Microsoft/TypeScript/issues/12215#issuecomment-311923766
-type Diff<T extends string, U extends string> = (
-  { [P in T]: P }
-  & { [P in U]: never }
-  & { [x: string]: never }
-)[T];
-type Omit<T, K extends keyof T> = Pick<T, Diff<keyof T, K>>;
+export interface FormNode {
+  [key: string]: string | FormNode;
+}
+
+export type FormValue = string | FormNode;
 
 export interface OnFormSubmitResponse {
   success: boolean;
@@ -16,24 +14,28 @@ export interface OnFormSubmitResponse {
 }
 
 export interface FormProps {
+  namespace: string;
   onSubmit?: (values: FormNode) => Promise<OnFormSubmitResponse>;
 }
 
-export interface FormNode {
-  [key: string]: string | FormNode;
-}
-
-export type FormValue = string | FormNode;
+type Validation = React.Component;
 
 export interface FormState {
   disabled: boolean;
+  validating: boolean;
+  validations: Array<Validation>;
+  validationsWaiting: Array<Validation>;
   values: FormNode;
   response?: OnFormSubmitResponse;
 }
 
 export interface FormContext {
   disabled: boolean;
+  namespace: string;
+  validating: boolean;
   onUpdate(name: string, value: FormValue): void;
+  validationCompleted(validation: Validation): void;
+  validationRegister(validation: Validation): void;
 }
 
 interface Render<Props extends {}> {
@@ -44,7 +46,15 @@ export default class Form
 extends React.Component<FormProps, FormState> {
   public static Context: Context<FormContext> = React.createContext({
     disabled: false,
+    namespace: '',
     onUpdate(name: string, value: FormValue): void {
+      return;
+    },
+    validating: false,
+    validationCompleted(validation: Validation): void {
+      return;
+    },
+    validationRegister(validation: Validation): void {
       return;
     },
   });
@@ -53,7 +63,7 @@ extends React.Component<FormProps, FormState> {
     ChildProps extends FormContext,
     ExposedProps = Omit<ChildProps, keyof FormContext>
   >(
-    child: React.ComponentType<ChildProps>
+    child: React.ComponentClass<ChildProps>
   ): React.FunctionComponent<ExposedProps> {
     const render: Render<ChildProps> = {
       component: child,
@@ -72,6 +82,9 @@ extends React.Component<FormProps, FormState> {
 
   public readonly state: FormState = {
     disabled: false,
+    validating: false,
+    validations: [],
+    validationsWaiting: [],
     values: {},
   };
 
@@ -94,18 +107,71 @@ extends React.Component<FormProps, FormState> {
     );
   }
 
-  private onSubmit = async (event: React.SyntheticEvent<HTMLFormElement>): Promise<boolean> => {
-    let success: boolean = false;
-
+  private onSubmit = (event: React.SyntheticEvent<HTMLFormElement>): void => {
     event.preventDefault();
     this.setState({
       disabled: true,
+      validating: true,
     });
+  };
 
+  private formContext(): FormContext {
+    return {
+      disabled: this.state.disabled,
+      namespace: this.props.namespace,
+      onUpdate: this.onUpdate,
+      validating: this.state.validating,
+      validationCompleted: this.validationCompleted,
+      validationRegister: this.validationRegister,
+    };
+  }
+
+  private validationRegister = (validation: Validation): void => {
+    this.setState(
+      (
+        prevState: FormState
+      ): Pick<FormState, 'validations' | 'validationsWaiting'> => {
+        const validations: Array<Validation> = prevState.validations.concat(validation);
+
+        return {
+          validations,
+          validationsWaiting: validations,
+        };
+      }
+    );
+  };
+
+  private validationCompleted = (validation: Validation): void => {
+    this.setState(
+      (
+        prevState: FormState
+      ): Pick<FormState, 'validating' |  'validationsWaiting'> => {
+        const index: number = prevState.validationsWaiting.indexOf(validation);
+        let validationsWaiting: Array<Validation> = prevState.validationsWaiting.slice(0);
+
+        if (index > -1) {
+          validationsWaiting.splice(index, 1);
+        }
+
+        const validating: boolean = validationsWaiting.length > 0;
+
+        if (!validating) {
+          validationsWaiting = prevState.validations;
+          this.onValidationComplete();
+        }
+
+        return {
+          validating,
+          validationsWaiting,
+        };
+      }
+    );
+  };
+
+  private async onValidationComplete(): Promise<void> {
     if (this.props.onSubmit) {
       const response: OnFormSubmitResponse = await this.props.onSubmit(this.state.values);
 
-      success = response.success;
       this.setState({
         response,
       });
@@ -114,14 +180,5 @@ extends React.Component<FormProps, FormState> {
     this.setState({
       disabled: false,
     });
-
-    return success;
-  };
-
-  private formContext(): FormContext {
-    return {
-      disabled: this.state.disabled,
-      onUpdate: this.onUpdate,
-    };
   }
 }
