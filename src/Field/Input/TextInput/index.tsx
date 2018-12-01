@@ -1,4 +1,4 @@
-import Form from '../../../Form';
+import Index from '../../../Form';
 import TextInput from './TextInput';
 
-export default Form.withContext(TextInput);
+export default Index.withContext(TextInput);

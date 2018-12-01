@@ -4,12 +4,12 @@ import {
 } from '../Form';
 
 export interface SubmitProps
-extends FormContext {
+  extends FormContext {
   className?: string;
 }
 
 export default class Submit
-extends React.Component<SubmitProps> {
+  extends React.Component<SubmitProps> {
   public render(): React.ReactElement<{}> {
     return (
       <button

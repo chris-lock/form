@@ -1,5 +1,5 @@
-import Input, {
-  TextInputProps
+import TextInput, {
+  TextInputProps,
 } from '../TextInput/TextInput';
 
 export interface NumberInputProps
@@ -9,5 +9,5 @@ extends TextInputProps {
 }
 
 export default class NumberInput<Props extends NumberInputProps>
-extends Input<Props> {
+extends TextInput<Props> {
 }

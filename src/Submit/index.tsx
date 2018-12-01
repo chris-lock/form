@@ -1,4 +1,4 @@
-import Form from '../Form';
+import Index from '../Form';
 import Submit from './Submit';
 
-export default Form.withContext(Submit);
+export default Index.withContext(Submit);

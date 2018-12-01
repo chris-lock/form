@@ -4,28 +4,30 @@ import {
 import {
   storiesOf,
 } from '@storybook/react';
-import React, {
-  ReactElement,
-} from 'react';
+import React from 'react';
 import NumberInput from '../Field/Input/NumberInput';
 import TextInput from '../Field/Input/TextInput';
 import Form, {
-  FormNode,
-  FormProps,
+  FormValue,
   OnFormSubmitResponse,
 } from '../Form';
 import Submit from '../Submit';
-import network from './utils/network/index';
+import network from './utils/network';
 
-async function onSubmit(values: FormNode): Promise<OnFormSubmitResponse> {
-  action('onSubmit')(values);
+function onComplete(name: string): () => Promise<void> {
+  return async (): Promise<void> => {
+    action(name)(Date.now());
+  };
+}
+
+async function onSuccess(values: FormValue): Promise<OnFormSubmitResponse> {
+  action('onSuccess')(Date.now(), values);
 
   return network
     .post('', values)
     .success('worked', 3000)
-    .then()
     .then((message: string) => {
-      action('onSubmitResponse')(message);
+      action('onSuccessResponse')(Date.now(), message);
 
       return {
         message,
@@ -33,14 +35,31 @@ async function onSubmit(values: FormNode): Promise<OnFormSubmitResponse> {
       };
     });
 }
+
 storiesOf('Components', module)
   .add(
     'Form',
-    (): ReactElement<FormProps> => (
-      <Form namespace="form" onSubmit={onSubmit}>
-        <TextInput name="wat" required={true} />
-        <TextInput name="nah" />
-        <NumberInput name="nah" minValue={1} />
+    (): React.ReactElement<{}> => (
+      <Form
+        namespace="form"
+        onSubmit={onComplete('onSubmit')}
+        onSuccess={onSuccess}
+        onFailure={onComplete('onFailure')}
+      >
+        <TextInput
+          label="Wat"
+          name="wat"
+          required={true}
+        />
+        <TextInput
+          label="Nah"
+          name="nah"
+        />
+        <NumberInput
+          label="Dis"
+          name="dis"
+          minValue={1}
+        />
 
         <Submit>Submit</Submit>
       </Form>

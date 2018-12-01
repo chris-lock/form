@@ -1,7 +1,7 @@
 import React from 'react';
 import Input, {
   InputProps
-} from '../index';
+} from '../../Input';
 
 export interface TextInputProps
 extends InputProps {
@@ -11,29 +11,37 @@ extends InputProps {
   maxLength?: number;
   minLength?: number;
 }
+
 export default class TextInput<Props extends TextInputProps>
 extends Input<Props> {
   constructor(props: Props) {
     super(props);
   }
 
-  public render(): React.ReactElement<{}> {
+  protected renderField(): React.ReactElement<{}> {
     return (
       <input
         autoCapitalize={this.props.autoCapitalize}
         autoComplete={this.props.autoComplete}
         autoCorrect={this.props.autoCorrect}
-        className={this.props.className}
+        className={this.fieldClassName()}
         disabled={this.props.disabled}
+        id={this.id()}
         maxLength={this.props.maxLength}
         name={this.props.name}
+        onBlur={this.onBlur}
         onChange={this.onChange}
+        onFocus={this.onFocus}
         placeholder={this.props.placeholder}
         tabIndex={this.props.tabIndex}
         value={this.state.value}
       />
     );
   }
+
+  protected validate = async (): Promise<boolean> => {
+    return true;
+  };
 }
 
 // <input
@@ -43,7 +51,6 @@ extends Input<Props> {
 //   className={className}
 //   disabled={isDisabled}
 //   id={id}
-//   key={key}
 //   maxLength={this.props.maxLength}
 //   name={this.props.name}
 //   onBlur={this.onBlur}

@@ -1,7 +1,6 @@
-import React from 'react';
 import Field, {
   FieldProps
-} from '../index';
+} from '../../Field';
 
 export interface InputProps
 extends FieldProps {
@@ -11,7 +10,4 @@ extends FieldProps {
 
 export default abstract class Input<Props extends InputProps>
 extends Field<Props> {
-  public onChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
-    this.updateValue(event.target.value);
-  };
 }

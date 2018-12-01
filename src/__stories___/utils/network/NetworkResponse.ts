@@ -1,27 +1,15 @@
-type Resolver = (message: string) => void;
-type ResponseMethod = (resolve: Resolver, reject: Resolver) => void;
+import sleep from '../Sleep';
 
 export default class NetworkResponse {
-  public success(message: string, timeout: number = 0): Promise<string> {
-    return this.promise(
-      (resolve: Resolver, reject: Resolver): void => resolve(message),
-      timeout
-    );
+  public async success(message: string, timeout: number = 0): Promise<string> {
+    await sleep(timeout);
+
+    return Promise.resolve(message);
   }
 
-  private promise(responseMethod: ResponseMethod, timeout: number): Promise<string> {
-    return new Promise<string>((resolve: Resolver, reject: Resolver): void => {
-      setTimeout(
-        (): void => responseMethod(resolve, reject),
-        timeout
-      );
-    });
-  }
+  public async failure(message: string, timeout: number = 0): Promise<string> {
+    await sleep(timeout);
 
-  public failure(message: string, timeout: number = 0): Promise<string> {
-    return this.promise(
-      (resolve: Resolver, reject: Resolver): void => reject(message),
-      timeout
-    );
+    return Promise.reject(message);
   }
 }

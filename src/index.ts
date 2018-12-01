@@ -1,9 +1,9 @@
-import Input from './Field/Input';
-import Form from './Form';
+import TextInput from './Field/Input/TextInput';
+import Index from './Form';
 import Submit from './Submit';
 
 export default {
-  Form,
-  Input,
+  Form: Index,
   Submit,
+  TextInput,
 };
