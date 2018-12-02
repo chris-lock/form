@@ -43,7 +43,7 @@ extends Node<FormProps, FormState> {
   >(
     component: React.ComponentClass<Props>
   ): React.FunctionComponent<ExposedProps> {
-    const render: Render<Props> = {
+    const render: Render<React.ComponentType<Props>> = {
       component,
     };
     const wrapper: React.FunctionComponent<ExposedProps> = (

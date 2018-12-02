@@ -14,6 +14,8 @@ extends InputProps {
 
 export default class TextInput<Props extends TextInputProps>
 extends Input<Props> {
+  protected type: string = 'text';
+
   constructor(props: Props) {
     super(props);
   }
@@ -34,31 +36,17 @@ extends Input<Props> {
         onFocus={this.onFocus}
         placeholder={this.props.placeholder}
         tabIndex={this.props.tabIndex}
+        type={this.typeOverride()}
         value={this.state.value}
       />
     );
+  }
+
+  protected typeOverride(): string {
+    return this.type;
   }
 
   protected validate = async (): Promise<boolean> => {
     return true;
   };
 }
-
-// <input
-//   autoCapitalize={this.autoCapitalize()}
-//   autoComplete={this.autoComplete()}
-//   autoCorrect={this.autoCorrect()}
-//   className={className}
-//   disabled={isDisabled}
-//   id={id}
-//   maxLength={this.props.maxLength}
-//   name={this.props.name}
-//   onBlur={this.onBlur}
-//   onChange={this.onChange}
-//   onFocus={this.onFocus}
-//   placeholder={this.placeholder()}
-//   ref={this.setInputElement}
-//   tabIndex={this.props.tabIndex}
-//   type={this.inputType}
-//   value={this.state.value}
-// />

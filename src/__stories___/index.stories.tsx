@@ -6,6 +6,7 @@ import {
 } from '@storybook/react';
 import React from 'react';
 import NumberInput from '../Field/Input/NumberInput';
+import TelephoneInput from '../Field/Input/TelephoneInput';
 import TextInput from '../Field/Input/TextInput';
 import Form, {
   FormValue,
@@ -59,6 +60,10 @@ storiesOf('Components', module)
           label="Dis"
           name="dis"
           minValue={1}
+        />
+        <TelephoneInput
+          label="Tel"
+          name="tel"
         />
 
         <Submit>Submit</Submit>

@@ -3,6 +3,7 @@ import {
   FormContext,
   FormValue,
 } from '../Form';
+import Formatter from '../utils/Formatter';
 
 export interface FieldProps
 extends FormContext {
@@ -25,9 +26,8 @@ export interface FieldState {
 
 export default abstract class Field<Props extends FieldProps>
 extends React.Component<Props, FieldState> {
-  public static defaultProps: Partial<FieldProps> = {
-    component: 'div',
-  };
+  protected displayFormatter?: Formatter;
+  protected formFormatter?: Formatter;
 
   public readonly state: Readonly<FieldState> = {
     error: '',
@@ -46,8 +46,8 @@ extends React.Component<Props, FieldState> {
   protected abstract async validate(): Promise<boolean>;
 
   public render(): React.ReactElement<{}> {
-    const render: Render<{}> = {
-      component: this.props.component,
+    const render: Render<keyof JSX.IntrinsicElements> = {
+      component: (this.props.component as keyof JSX.IntrinsicElements) || 'div',
     };
 
     return (
@@ -109,9 +109,28 @@ extends React.Component<Props, FieldState> {
 
   public updateValue(value: string): void {
     this.setState({
-      value,
+      value: this.formatDisplayValue(value),
     });
-    this.props.onUpdate(this.props.name, value);
+    this.props.onUpdate(
+      this.props.name,
+      this.formatFormValue(value)
+    );
+  }
+
+  protected formatDisplayValue(value: string): string {
+    if (this.displayFormatter) {
+      return this.displayFormatter.format(value);
+    }
+
+    return value;
+  }
+
+  protected formatFormValue(value: string): string {
+    if (this.formFormatter) {
+      return this.formFormatter.format(value);
+    }
+
+    return value;
   }
 
   protected onFocus = (event: React.FocusEvent<HTMLInputElement>): void => {
