@@ -1,19 +1,22 @@
 import React from 'react';
 import {
   FormContext,
-  FormValue,
 } from '../Form';
 import Formatter from '../utils/Formatter';
 
-export interface FieldProps
+export interface FieldElement {
+  value: string;
+}
+
+export interface FieldProps<Element extends FieldElement>
 extends FormContext {
   name: string;
   className?: string;
   component?: keyof JSX.IntrinsicElements;
   label?: React.ReactNode;
-  onBlur?: (value: FormValue) => void;
-  onChange?: (value: FormValue) => void;
-  onFocus?: (value: FormValue) => void;
+  onBlur?: React.FocusEventHandler<Element>;
+  onChange?: React.ChangeEventHandler<Element>;
+  onFocus?: React.FocusEventHandler<Element>;
   required?: boolean;
   tabIndex?: number;
 }
@@ -24,7 +27,10 @@ export interface FieldState {
   value: string;
 }
 
-export default abstract class Field<Props extends FieldProps>
+export default abstract class Field<
+  Element extends FieldElement,
+  Props extends FieldProps<Element>
+>
 extends React.Component<Props, FieldState> {
   protected displayFormatter?: Formatter;
   protected formFormatter?: Formatter;
@@ -36,14 +42,18 @@ extends React.Component<Props, FieldState> {
   };
 
   public componentDidMount(): void {
-    this.props.validator.add(this.validate);
+    this.props.manager.add(this);
   }
 
   public componentWillUnmount(): void {
-    this.props.validator.add(this.validate);
+    this.props.manager.add(this);
   }
 
-  protected abstract async validate(): Promise<boolean>;
+  public clear(): void {
+    this.updateValue('');
+  }
+
+  public abstract async validate(): Promise<boolean>;
 
   public render(): React.ReactElement<{}> {
     const render: Render<keyof JSX.IntrinsicElements> = {
@@ -85,25 +95,11 @@ extends React.Component<Props, FieldState> {
     return 'a';
   }
 
-  protected onBlur = (event: React.FocusEvent<HTMLInputElement>): void => {
-    if (this.props.onBlur) {
-      this.props.onBlur(this.getEventValue(event));
-    }
-  };
-
-  protected getEventValue(
-    event: React.FocusEvent<HTMLInputElement> | React.ChangeEvent<HTMLInputElement>
-  ): string {
-    return event.target.value;
-  }
-
-  protected onChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    const value: string = this.getEventValue(event);
-
-    this.updateValue(value);
+  protected onChange = (event: React.ChangeEvent<Element>): void => {
+    this.updateValue(event.target.value);
 
     if (this.props.onChange) {
-      this.props.onChange(value);
+      this.props.onChange(event);
     }
   };
 
@@ -111,7 +107,7 @@ extends React.Component<Props, FieldState> {
     this.setState({
       value: this.formatDisplayValue(value),
     });
-    this.props.onUpdate(
+    this.props.manager.onUpdate(
       this.props.name,
       this.formatFormValue(value)
     );
@@ -132,10 +128,4 @@ extends React.Component<Props, FieldState> {
 
     return value;
   }
-
-  protected onFocus = (event: React.FocusEvent<HTMLInputElement>): void => {
-    if (this.props.onFocus) {
-      this.props.onFocus(this.getEventValue(event));
-    }
-  };
 }

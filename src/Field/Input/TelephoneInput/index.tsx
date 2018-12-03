@@ -1,4 +1,4 @@
-import Index from '../../../Form';
+import Form from '../../../Form';
 import TelephoneInput from './TelephoneInput';
 
-export default Index.withContext(TelephoneInput);
+export default Form.withContext(TelephoneInput);

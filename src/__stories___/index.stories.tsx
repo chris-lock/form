@@ -5,14 +5,16 @@ import {
   storiesOf,
 } from '@storybook/react';
 import React from 'react';
+import Clear from '../Button/Clear';
+import Submit from '../Button/Submit';
 import NumberInput from '../Field/Input/NumberInput';
 import TelephoneInput from '../Field/Input/TelephoneInput';
 import TextInput from '../Field/Input/TextInput';
 import Form, {
-  FormValue,
+  FormValues,
   OnFormSubmitResponse,
 } from '../Form';
-import Submit from '../Submit';
+import Group from '../Group';
 import network from './utils/network';
 
 function onComplete(name: string): () => Promise<void> {
@@ -21,7 +23,7 @@ function onComplete(name: string): () => Promise<void> {
   };
 }
 
-async function onSuccess(values: FormValue): Promise<OnFormSubmitResponse> {
+async function onSuccess(values: FormValues): Promise<OnFormSubmitResponse> {
   action('onSuccess')(Date.now(), values);
 
   return network
@@ -52,19 +54,28 @@ storiesOf('Components', module)
           name="wat"
           required={true}
         />
+
         <TextInput
           label="Nah"
           name="nah"
         />
-        <NumberInput
-          label="Dis"
-          name="dis"
-          minValue={1}
-        />
-        <TelephoneInput
-          label="Tel"
-          name="tel"
-        />
+
+        <Group name="yah">
+          <NumberInput
+            label="Dis"
+            name="dis"
+            minValue={1}
+          />
+
+          <TelephoneInput
+            label="Tel"
+            name="tel"
+          />
+
+          <Clear>Clear Group</Clear>
+        </Group>
+
+        <Clear>Clear</Clear>
 
         <Submit>Submit</Submit>
       </Form>

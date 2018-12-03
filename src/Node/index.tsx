@@ -1,7 +1,7 @@
 import React, {
   Context,
 } from 'react';
-import Validator from '../utils/Validator';
+import Manager from './Manager';
 
 export interface NodeProps {
 }
@@ -9,31 +9,31 @@ export interface NodeProps {
 export interface NodeState {
 }
 
-export type NodeValue = string | {
-  [key: string]: string | NodeValue;
-};
+export interface NodeValues {
+  [key: string]: string | NodeValues;
+}
+
+export type NodeValue = string | NodeValues;
 
 export interface NodeContext {
   disabled: boolean;
+  manager: Manager;
   namespace: string;
   validating: boolean;
-  validator: Validator;
-  onUpdate(name: string, value: NodeValue): void;
 }
 
 export default abstract class Node<Props extends NodeProps, State extends NodeState>
 extends React.Component<Props, State> {
-  public static Context: Context<NodeContext> = React.createContext({
+  public static readonly Context: Context<NodeContext> = React.createContext({
     disabled: false,
-    namespace: '',
-    onUpdate(name: string, value: NodeValue): void {
+    manager: Manager.allValid((name: string, value: NodeValue): void => {
       return;
-    },
+    }),
+    namespace: '',
     validating: false,
-    validator: Validator.every(),
   });
 
-  protected abstract readonly validator: Validator;
+  protected abstract readonly manager: Manager;
 
   public render(): React.ReactElement<{}> {
     return (
@@ -46,18 +46,15 @@ extends React.Component<Props, State> {
   private nodeContext(): NodeContext {
     return {
       disabled: this.disabled(),
+      manager: this.manager,
       namespace: this.namespace(),
-      onUpdate: this.onUpdate,
       validating: this.validating(),
-      validator: this.validator,
     };
   }
 
   protected abstract disabled(): boolean;
 
   protected abstract namespace(): string;
-
-  protected abstract onUpdate(name: string, value: NodeValue): void;
 
   protected abstract validating(): boolean;
 }

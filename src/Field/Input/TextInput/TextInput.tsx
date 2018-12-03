@@ -4,7 +4,7 @@ import Input, {
 } from '../../Input';
 
 export interface TextInputProps
-extends InputProps {
+extends InputProps<HTMLInputElement> {
   autoCapitalize?: 'off' | 'on' | 'words' | 'characters';
   autoComplete?: 'off' | 'on';
   autoCorrect?: 'off' | 'on';
@@ -13,7 +13,7 @@ extends InputProps {
 }
 
 export default class TextInput<Props extends TextInputProps>
-extends Input<Props> {
+extends Input<HTMLInputElement, Props> {
   protected type: string = 'text';
 
   constructor(props: Props) {
@@ -31,9 +31,9 @@ extends Input<Props> {
         id={this.id()}
         maxLength={this.props.maxLength}
         name={this.props.name}
-        onBlur={this.onBlur}
+        onBlur={this.props.onBlur}
         onChange={this.onChange}
-        onFocus={this.onFocus}
+        onFocus={this.props.onFocus}
         placeholder={this.props.placeholder}
         tabIndex={this.props.tabIndex}
         type={this.typeOverride()}
@@ -46,7 +46,7 @@ extends Input<Props> {
     return this.type;
   }
 
-  protected validate = async (): Promise<boolean> => {
+  public readonly validate = async (): Promise<boolean> => {
     return true;
   };
 }

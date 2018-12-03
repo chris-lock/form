@@ -4,10 +4,14 @@ import Node, {
   NodeProps,
   NodeState,
   NodeValue,
+  NodeValues,
 } from '../Node';
-import Validator from '../utils/Validator';
+import Manager from '../Node/Manager';
+import FormValueHelpers from '../utils/FormValueHelpers';
 
 export type FormValue = NodeValue;
+
+export type FormValues = NodeValues;
 
 export interface OnFormSubmitResponse {
   success: boolean;
@@ -18,7 +22,7 @@ export interface FormProps
 extends NodeProps {
   namespace: string;
   onSubmit?: () => Promise<void>;
-  onSuccess?: (values: FormValue) => Promise<OnFormSubmitResponse>;
+  onSuccess?: (values: FormValues) => Promise<OnFormSubmitResponse>;
   onFailure?: () => Promise<void>;
 }
 
@@ -26,9 +30,7 @@ export interface FormState
 extends NodeState {
   disabled: boolean;
   validating: boolean;
-  values: {
-    [key: string]: NodeValue,
-  };
+  values: FormValues;
   response?: OnFormSubmitResponse;
 }
 
@@ -60,12 +62,25 @@ extends Node<FormProps, FormState> {
     return wrapper;
   }
 
-  protected readonly validator: Validator = Validator.every();
+  protected readonly manager: Manager = Manager.allValid(
+    (name: string, value: NodeValue): void => this.onUpdate(name, value)
+  );
 
   public readonly state: FormState = {
     disabled: false,
     validating: false,
     values: {},
+  };
+
+  protected readonly onUpdate = (name: string, value: NodeValue): void => {
+    this.setState((prevState: FormState): Pick<FormState, 'values'> => ({
+      values: FormValueHelpers.deepMerge(
+        prevState.values,
+        {
+          [name]: value,
+        }
+      ),
+    }));
   };
 
   public render(): React.ReactElement<{}> {
@@ -76,7 +91,9 @@ extends Node<FormProps, FormState> {
     );
   }
 
-  private onSubmit = async (event: React.SyntheticEvent<HTMLFormElement>): Promise<void> => {
+  private readonly onSubmit = async (
+    event: React.SyntheticEvent<HTMLFormElement>
+  ): Promise<void> => {
     event.preventDefault();
     this.setState({
       disabled: true,
@@ -87,7 +104,7 @@ extends Node<FormProps, FormState> {
       await this.props.onSubmit();
     }
 
-    const valid: boolean = await this.validator.validate();
+    const valid: boolean = await this.manager.validate();
 
     this.setState({
       validating: false,
@@ -127,15 +144,6 @@ extends Node<FormProps, FormState> {
   protected namespace(): string {
     return this.props.namespace;
   }
-
-  protected onUpdate = (name: string, value: NodeValue): void => {
-    this.setState((prevState: FormState): Pick<FormState, 'values'> => ({
-      values: {
-        ...prevState.values,
-        [name]: value,
-      },
-    }));
-  };
 
   protected validating(): boolean {
     return this.state.validating;

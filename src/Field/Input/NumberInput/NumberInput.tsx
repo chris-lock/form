@@ -14,7 +14,7 @@ export default class NumberInput
 extends TextInput<NumberInputProps> {
   protected displayFormatter?: Formatter = Formatter.numeric();
 
-  protected getType(): string {
+  protected typeOverride(): string {
     return this.props.type || this.type;
   }
 }
