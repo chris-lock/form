@@ -3,23 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8c544917-ce1c-4192-889f-7905927b5503" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clear/Clear.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clear/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Field/Input/NumberInput/NumberInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Field/Input/NumberInput/NumberInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Field/Input/NumberInput/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Field/Input/NumberInput/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Field/Input/TelephoneInput/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Field/Input/TelephoneInput/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Field/Input/TextInput/TextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Field/Input/TextInput/TextInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Field/Input/TextInput/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Field/Input/TextInput/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Field/Input/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Field/Input/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Field/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Field/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Node/Manager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node/Manager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Node/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Submit/Submit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button/Submit/Submit.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Submit/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button/Submit/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__stories___/index.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/__stories___/index.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Validator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,27 +24,28 @@
     <session id="-62901544">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="browserslistrc" value="1" />
+          <entry key="browserslistrc" value="2" />
           <entry key="iml" value="1" />
           <entry key="java" value="1" />
-          <entry key="js" value="54" />
-          <entry key="json" value="15" />
+          <entry key="js" value="55" />
+          <entry key="json" value="16" />
+          <entry key="md" value="1" />
           <entry key="npmrc" value="1" />
-          <entry key="ts" value="126" />
-          <entry key="tsx" value="191" />
+          <entry key="ts" value="140" />
+          <entry key="tsx" value="202" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -67,11 +53,12 @@
         <counts>
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="1" />
-          <entry key="JSON" value="10" />
-          <entry key="JavaScript" value="54" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="TypeScript" value="126" />
-          <entry key="TypeScript JSX" value="191" />
+          <entry key="JSON" value="11" />
+          <entry key="JavaScript" value="55" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Scratch" value="6" />
+          <entry key="TypeScript" value="137" />
+          <entry key="TypeScript JSX" value="200" />
           <entry key="XML" value="1" />
           <entry key="tsconfig" value="5" />
         </counts>
@@ -79,35 +66,55 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="js" value="1" />
-          <entry key="json" value="36" />
-          <entry key="ts" value="3743" />
-          <entry key="tsx" value="10512" />
+          <entry key="json" value="46" />
+          <entry key="md" value="80" />
+          <entry key="ts" value="5774" />
+          <entry key="tsx" value="12717" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="29" />
+          <entry key="JSON" value="39" />
           <entry key="JavaScript" value="1" />
-          <entry key="TypeScript" value="3743" />
-          <entry key="TypeScript JSX" value="10512" />
+          <entry key="Scratch" value="1891" />
+          <entry key="TypeScript" value="5774" />
+          <entry key="TypeScript JSX" value="10906" />
           <entry key="tsconfig" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="TsLintLanguageService" value="9" />
-          <entry key="TypeScriptServerServiceImpl" value="11" />
+          <entry key="TsLintLanguageService" value="11" />
+          <entry key="TypeScriptServerServiceImpl" value="13" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Field/index.tsx">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Form/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="59" column="78" selection-start-line="59" selection-start-column="75" selection-end-line="59" selection-end-column="78" />
+            <state relative-caret-position="-282">
+              <caret line="79" column="24" lean-forward="true" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/Fo.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tslint.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -115,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/__stories___/index.stories.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-118">
-              <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+            <state relative-caret-position="848">
+              <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -153,6 +160,8 @@
       <find>Click</find>
       <find>FocusEvent</find>
       <find>index'</find>
+      <find>constru</find>
+      <find>conso</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -180,11 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Node/Branch.tsx" />
-        <option value="$PROJECT_DIR$/src/Node/Validator.ts" />
-        <option value="$PROJECT_DIR$/src/Node/Leaf.tsx" />
-        <option value="$PROJECT_DIR$/src/Tree/Leaf.tsx" />
-        <option value="$PROJECT_DIR$/src/Tree/Branch.tsx" />
         <option value="$PROJECT_DIR$/src/Group/BranchProps.java" />
         <option value="$PROJECT_DIR$/src/Context/index.tsx" />
         <option value="$PROJECT_DIR$/src/__stories___/utils/Sleep.ts" />
@@ -194,12 +198,9 @@
         <option value="$PROJECT_DIR$/src/Form.tsx" />
         <option value="$PROJECT_DIR$/src/Form/Form.tsx" />
         <option value="$PROJECT_DIR$/src/Submit/index.tsx" />
-        <option value="$PROJECT_DIR$/src/index.ts" />
         <option value="$PROJECT_DIR$/src/__stories___/utils/network/NetworkResponse.ts" />
-        <option value="$PROJECT_DIR$/tslint.json" />
         <option value="$PROJECT_DIR$/.idea/modules.xml" />
         <option value="$PROJECT_DIR$/src/types.d.ts" />
-        <option value="$PROJECT_DIR$/src/global.d.ts" />
         <option value="$PROJECT_DIR$/src/Field/Input/TelephoneInput/TelephoneInput.tsx" />
         <option value="$PROJECT_DIR$/src/Field/Input/NumberInput/NumberInput.tsx" />
         <option value="$PROJECT_DIR$/src/Group/index.tsx" />
@@ -221,7 +222,6 @@
         <option value="$PROJECT_DIR$/src/Clear/Clear.tsx" />
         <option value="$PROJECT_DIR$/src/Group/Group.tsx" />
         <option value="$PROJECT_DIR$/src/Node/index.tsx" />
-        <option value="$PROJECT_DIR$/src/Form/index.tsx" />
         <option value="$PROJECT_DIR$/src/Field/Input/TextInput/TextInput.tsx" />
         <option value="$PROJECT_DIR$/src/Button/Button.tsx" />
         <option value="$PROJECT_DIR$/src/Node/Manager.ts" />
@@ -229,8 +229,17 @@
         <option value="$PROJECT_DIR$/src/Button/Submit/Submit.tsx" />
         <option value="$PROJECT_DIR$/src/Button/index.tsx" />
         <option value="$PROJECT_DIR$/src/Button/Clear/Clear.tsx" />
-        <option value="$PROJECT_DIR$/src/__stories___/index.stories.tsx" />
         <option value="$PROJECT_DIR$/src/Field/index.tsx" />
+        <option value="$PROJECT_DIR$/src/index.ts" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.md" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/onboarding-calendar.md" />
+        <option value="$PROJECT_DIR$/src/global.d.ts" />
+        <option value="$PROJECT_DIR$/src/Form/index.tsx" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.tsx" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.tsx" />
+        <option value="$PROJECT_DIR$/src/__stories___/index.stories.tsx" />
+        <option value="$PROJECT_DIR$/src/utils/Fo.ts" />
+        <option value="$PROJECT_DIR$/tslint.json" />
       </list>
     </option>
   </component>
@@ -256,7 +265,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="878" />
@@ -287,28 +296,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Field" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Default Changelist'; set:Default Changelist; class com.intellij.packageDependencies.ChangeListScope">
           <expand>
@@ -355,13 +342,70 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="__stories___" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Field" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Field" type="462c0819:PsiDirectoryNode" />
+              <item name="Input" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543806735412" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543901310699" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -377,12 +421,13 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28870293" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="typescript-compiler-editor-notification" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Field/Checkable/Radio" />
       <recent name="$PROJECT_DIR$/src/Clear" />
       <recent name="$PROJECT_DIR$/src/Field/Input" />
       <recent name="$PROJECT_DIR$/src" />
@@ -449,18 +494,20 @@
       <workItem from="1543631096970" duration="25002000" />
       <workItem from="1543701553887" duration="5044000" />
       <workItem from="1543706614309" duration="3650000" />
-      <workItem from="1543786358957" duration="19313000" />
+      <workItem from="1543786358957" duration="20047000" />
+      <workItem from="1543850726577" duration="12440000" />
+      <workItem from="1543887941513" duration="13557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88170000" />
+    <option name="totallyTimeSpent" value="114901000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20243205" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19384836" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -500,52 +547,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../plated/app/_assets/js/components/forms/FormNode.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="193" column="20" lean-forward="true" selection-start-line="193" selection-start-column="20" selection-end-line="193" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.iterable.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="217" column="44" lean-forward="true" selection-start-line="217" selection-start-column="44" selection-end-line="217" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lint-staged.config.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Node/Branch.tsx" />
-    <entry file="file://$PROJECT_DIR$/src/Tree/Branch.tsx" />
-    <entry file="file://$PROJECT_DIR$/src/Group/BranchProps.java" />
-    <entry file="file://$PROJECT_DIR$/src/Tree/Node.tsx" />
-    <entry file="file://$PROJECT_DIR$/src/__stories___/utils/Sleep.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="59" lean-forward="true" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/__stories___/utils/network/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="55" lean-forward="true" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@types/storybook__addon-actions/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -563,13 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tslint.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/form.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -584,13 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/global.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -657,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.es5.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="1293" column="11" selection-start-line="1293" selection-start-column="4" selection-end-line="1293" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
@@ -685,13 +669,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Clear.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Clear.ts" />
     <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
@@ -699,30 +677,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Validator.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" column="41" lean-forward="true" selection-start-line="2" selection-start-column="41" selection-end-line="3" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Collection.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="16" lean-forward="true" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Formatter.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Field/Input/TextInput/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Validator.ts" />
+    <entry file="file://$PROJECT_DIR$/src/utils/Collection.ts" />
     <entry file="file://$PROJECT_DIR$/src/Button/Submit/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -734,41 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-241">
           <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Field/Input/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Field/Input/TextInput/TextInput.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Node/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Node/Manager.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -800,24 +721,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/__stories___/index.stories.tsx">
+    <entry file="file://$PROJECT_DIR$/.browserslistrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.ts" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/action-creator.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.ts" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/onboarding-calendar.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret selection-end-line="19" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-118">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        <state relative-caret-position="234">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Field/Input/TextInput/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Node/Manager.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Field/Input/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="1408" column="5" selection-start-line="1408" selection-start-column="5" selection-end-line="1408" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="2719" column="20" selection-start-line="2719" selection-start-column="12" selection-end-line="2719" selection-end-column="20" />
+        <state relative-caret-position="240">
+          <caret line="349" column="10" selection-start-line="349" selection-start-column="10" selection-end-line="349" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Field/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="59" column="78" selection-start-line="59" selection-start-column="75" selection-end-line="59" selection-end-column="78" />
+        <state relative-caret-position="416">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Field/Input/TextInput/TextInput.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/global.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Node/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.tsx" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/wizard.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="117" column="60" lean-forward="true" selection-start-line="117" selection-start-column="60" selection-end-line="117" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../plated/app/_assets/js/components/forms/field/input/CreditCardInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="156" column="17" selection-start-line="156" selection-start-column="9" selection-end-line="156" selection-end-column="17" />
+          <caret line="156" column="28" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="28" />
+          <caret line="73" column="32" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Formatter.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="52" column="24" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-282">
+          <caret line="79" column="24" lean-forward="true" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__stories___/index.stories.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="848">
+          <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Fo.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tslint.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
         </state>
       </provider>
     </entry>

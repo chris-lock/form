@@ -31,6 +31,7 @@
         ]
       }
     ],
+    "no-console": false,
     "no-empty-interface": false,
     "no-implicit-dependencies": [
       true,

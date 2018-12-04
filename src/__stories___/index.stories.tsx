@@ -15,7 +15,26 @@ import Form, {
   OnFormSubmitResponse,
 } from '../Form';
 import Group from '../Group';
+import Formatter from '../utils/Fo';
 import network from './utils/network';
+
+function formatterTest(): Array<React.ReactNode> {
+  return [
+    ['a', 'a'],
+    ['ab', 'ab'],
+    ['ac', 'ac'],
+    ['c', 'c-'],
+    ['abc', 'abc'],
+    ['abb', 'ab__b'],
+  ]
+    .map((str: Array<string>, index: number): React.ReactNode => (
+      <li key={index}>
+        <b>
+          {Formatter.template(str[0], '#-#-#', 'a.#.#', 'ab__#', 'a#c', 'a#d')}
+        </b> ({str[0]} = {str[1]})
+      </li>
+    ));
+}
 
 function onComplete(name: string): () => Promise<void> {
   return async (): Promise<void> => {
@@ -49,6 +68,10 @@ storiesOf('Components', module)
         onSuccess={onSuccess}
         onFailure={onComplete('onFailure')}
       >
+        <ul>
+          {formatterTest()}
+        </ul>
+
         <TextInput
           label="Wat"
           name="wat"
