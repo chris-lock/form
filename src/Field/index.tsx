@@ -49,7 +49,7 @@ extends React.Component<Props, FieldState> {
     this.props.manager.add(this);
   }
 
-  public clear(): void {
+  public reset(): void {
     this.updateValue('');
   }
 

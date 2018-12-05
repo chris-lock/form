@@ -3,7 +3,7 @@ import Button, {
   ButtonType,
 } from '../../Button';
 
-export default class Clear
+export default class Reset
 extends Button {
   protected readonly type: ButtonType = 'button';
 
@@ -12,6 +12,6 @@ extends Button {
   protected readonly onClick = (event: React.MouseEvent<HTMLButtonElement>): void => {
     this.superOnClick(event);
 
-    this.props.manager.clear();
+    this.props.manager.reset();
   };
 }

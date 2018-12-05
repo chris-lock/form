@@ -5,7 +5,7 @@ import {
   storiesOf,
 } from '@storybook/react';
 import React from 'react';
-import Clear from '../Button/Clear';
+import Reset from '../Button/Reset';
 import Submit from '../Button/Submit';
 import NumberInput from '../Field/Input/NumberInput';
 import TelephoneInput from '../Field/Input/TelephoneInput';
@@ -95,10 +95,10 @@ storiesOf('Components', module)
             name="tel"
           />
 
-          <Clear>Clear Group</Clear>
+          <Reset>Reset Group</Reset>
         </Group>
 
-        <Clear>Clear</Clear>
+        <Reset>Reset</Reset>
 
         <Submit>Submit</Submit>
       </Form>

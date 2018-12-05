@@ -6,7 +6,7 @@ type OnUpdate = (name: string, value: NodeValue) => void;
 type ValidationStrategy = (validations: Array<boolean>) => boolean;
 
 interface Managed {
-  clear(): void;
+  reset(): void;
   validate(): Promise<boolean>;
 }
 
@@ -50,8 +50,8 @@ export default class Manager {
     return this;
   }
 
-  public clear = (): void => {
-    this.items.forEach((item: Managed): void => item.clear());
+  public reset = (): void => {
+    this.items.forEach((item: Managed): void => item.reset());
   };
 
   public onUpdate = (name: string, value: NodeValue): void => {

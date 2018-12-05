@@ -41,8 +41,8 @@ extends Node<Props, State> {
     this.props.manager.add(this);
   }
 
-  public readonly clear = (): void => {
-    this.manager.clear();
+  public readonly reset = (): void => {
+    this.manager.reset();
   };
 
   public readonly validate = async (): Promise<boolean> => {

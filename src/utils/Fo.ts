@@ -1,5 +1,14 @@
+interface FormatMatch {
+  matches: {
+    current: number,
+    exact: number;
+    template: number;
+  };
+  template: string;
+}
+
 export default class Formatter {
-  public static replacementChar: string = '#';
+  public static replaceChar: string = '#';
 
   public static template(
     str: string,
@@ -7,103 +16,57 @@ export default class Formatter {
     ...templates: Array<string>
   ): string {
     const chars: Array<string> = str.split('');
-    let bestTemplate: string = defaultTemplate;
-    let mostSequentialCharsMatched: number = -1;
-    let isTie: boolean = false;
-    console.group(chars.join(''));
-    [defaultTemplate, ...templates].forEach((template: string): void => {
-      const sequentialCharsMatched: number = Formatter.findSequentialCharsMatched(
-        chars,
-        template
+
+    const matches: Array<FormatMatch> = [defaultTemplate, ...templates]
+      .map((template: string): FormatMatch => Formatter.matchFormat(template, chars))
+      .sort((a: FormatMatch, b: FormatMatch): number =>
+        (b.matches.exact === a.matches.exact)
+          ? b.matches.template = a.matches.template
+          : b.matches.exact - a.matches.exact
       );
 
-      if (sequentialCharsMatched > mostSequentialCharsMatched) {
-        mostSequentialCharsMatched = sequentialCharsMatched;
-        bestTemplate = template;
-        isTie = false;
-      } else if (sequentialCharsMatched === mostSequentialCharsMatched) {
-        isTie = true;
-      }
-      console.table({
-        isTie,
-        sequentialCharsMatched,
-        template,
-      });
-    });
-    console.info(bestTemplate);
-    console.groupEnd();
-    return Formatter.replaceTemplateChars(
-      bestTemplate,
-      chars,
-      isTie
-    );
+    return Formatter.stripUnmatchedTemplateChars(matches[0]);
   }
 
-  public static findSequentialCharsMatched(chars: Array<string>, template: string): number {
-    let sequentialCharsMatched: number = -1;
+  public static matchFormat(template: string, chars: Array<string>): FormatMatch {
+    let currentMatch: number = 0;
+    let exactMatch: number = 0;
+    let templateMatch: number = 0;
 
-    chars.every((char: string, index: number): boolean => {
-      const templateChar: string = template[index];
-
-      if (templateChar === Formatter.replacementChar || templateChar === char) {
-        sequentialCharsMatched = index;
-
-        return true;
-      }
-
-      return false;
-    });
-
-    return sequentialCharsMatched;
-  }
-
-  public static replaceTemplateChars(
-    template: string,
-    chars: Array<string>,
-    isTie: boolean
-  ): string {
-    let currentReplacement: number = 0;
-
-    chars.forEach((char: string): void => {
-      const nextIdenticalChar: number = template.indexOf(char);
-      currentReplacement = template.indexOf(Formatter.replacementChar);
-
-      if (nextIdenticalChar === -1 || nextIdenticalChar > currentReplacement) {
-        template = template.replace(Formatter.replacementChar, char);
-      } else if (nextIdenticalChar > -1) {
-        currentReplacement = nextIdenticalChar;
-      }
-    });
-
-    return Formatter.replaceRemainingTemplateChars(
-      template,
-      currentReplacement,
-      isTie
-    );
-  }
-
-  public static replaceRemainingTemplateChars(
-    template: string,
-    currentReplacement: number,
-    isTie: boolean,
-    deletion: boolean = false,
-    includeTrailingFormatCharacters: boolean = true
-  ): string {
-    const nextReplacement: number = template.indexOf(Formatter.replacementChar);
-    console.info(template, nextReplacement);
-    if (isTie || (currentReplacement > -1 && nextReplacement > -1)) {
-      if (deletion || !includeTrailingFormatCharacters) {
-        return template.substr(0, currentReplacement);
-      } else if (isTie) {
-        return template.substr(0, currentReplacement + 1);
+    chars.forEach((char: string, index: number): void => {
+      if (template.indexOf(char) === currentMatch + index) {
+        exactMatch++;
       } else {
-        return template.substr(
-          0,
-          Math.max(currentReplacement, nextReplacement)
-        );
+        currentMatch = template.indexOf(Formatter.replaceChar);
+        template = template.replace(Formatter.replaceChar, char);
+        templateMatch++;
+      }
+    });
+
+    return {
+      matches: {
+        current: currentMatch,
+        exact: exactMatch,
+        template: templateMatch,
+      },
+      template,
+    };
+  }
+
+  public static stripUnmatchedTemplateChars(
+    match: FormatMatch,
+    stripTrailingTemplateChars: boolean = false
+  ): string {
+    const lastTemplateChar: number = match.template.lastIndexOf(Formatter.replaceChar);
+
+    if (match.matches.current > -1 && match.matches.current < lastTemplateChar) {
+      if (stripTrailingTemplateChars) {
+        return match.template.substr(0, match.matches.current + 1);
+      } else {
+        return match.template.substr(0, lastTemplateChar);
       }
     }
 
-    return template;
+    return match.template;
   }
 }
