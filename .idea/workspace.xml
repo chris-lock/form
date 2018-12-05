@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8c544917-ce1c-4192-889f-7905927b5503" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Button/Clear/Clear.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button/Reset/Reset.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Button/Clear/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button/Reset/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Button/Submit/Submit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button/Submit/Submit.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Field/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Field/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Group/Group.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Group/Group.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Node/Manager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node/Manager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__stories___/index.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/__stories___/index.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Fo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Fo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,15 +23,16 @@
     <session id="-62901544">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.1" value="6" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -52,7 +45,7 @@
           <entry key="md" value="1" />
           <entry key="npmrc" value="1" />
           <entry key="ts" value="143" />
-          <entry key="tsx" value="208" />
+          <entry key="tsx" value="209" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -65,7 +58,7 @@
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="Scratch" value="6" />
           <entry key="TypeScript" value="140" />
-          <entry key="TypeScript JSX" value="206" />
+          <entry key="TypeScript JSX" value="207" />
           <entry key="XML" value="1" />
           <entry key="tsconfig" value="6" />
         </counts>
@@ -75,7 +68,7 @@
           <entry key="js" value="1" />
           <entry key="json" value="46" />
           <entry key="md" value="80" />
-          <entry key="ts" value="6857" />
+          <entry key="ts" value="6998" />
           <entry key="tsx" value="12728" />
         </counts>
       </usages-collector>
@@ -84,7 +77,7 @@
           <entry key="JSON" value="39" />
           <entry key="JavaScript" value="1" />
           <entry key="Scratch" value="1891" />
-          <entry key="TypeScript" value="6857" />
+          <entry key="TypeScript" value="6998" />
           <entry key="TypeScript JSX" value="10917" />
           <entry key="tsconfig" value="7" />
         </counts>
@@ -92,7 +85,7 @@
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
           <entry key="TsLintLanguageService" value="12" />
-          <entry key="TypeScriptServerServiceImpl" value="14" />
+          <entry key="TypeScriptServerServiceImpl" value="15" />
         </counts>
       </usages-collector>
     </session>
@@ -102,8 +95,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/utils/Fo.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="63" column="65" selection-start-line="63" selection-start-column="65" selection-end-line="63" selection-end-column="65" />
+            <state relative-caret-position="382">
+              <caret line="61" column="14" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -111,8 +104,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/Formatter.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="76" column="15" lean-forward="true" selection-start-line="68" selection-start-column="4" selection-end-line="76" selection-end-column="15" />
+            <state relative-caret-position="1742">
+              <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/__stories___/index.stories.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2184">
+              <caret line="84" selection-start-line="84" selection-end-line="84" />
             </state>
           </provider>
         </entry>
@@ -284,7 +286,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -383,13 +384,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543982832394" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543984645189" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -482,18 +484,19 @@
       <workItem from="1543786358957" duration="20047000" />
       <workItem from="1543850726577" duration="12440000" />
       <workItem from="1543887941513" duration="13901000" />
-      <workItem from="1543939366269" duration="9166000" />
+      <workItem from="1543939366269" duration="10140000" />
+      <workItem from="1543984732651" duration="7000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124411000" />
+    <option name="totallyTimeSpent" value="125392000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="878" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="878" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19456366" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19742489" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -763,13 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/__stories___/index.stories.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Button/Reset/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -833,17 +829,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Formatter.ts">
+    <entry file="file://$PROJECT_DIR$/src/utils/Fo.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="76" column="15" lean-forward="true" selection-start-line="68" selection-start-column="4" selection-end-line="76" selection-end-column="15" />
+        <state relative-caret-position="382">
+          <caret line="61" column="14" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Fo.ts">
+    <entry file="file://$PROJECT_DIR$/src/utils/Formatter.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="63" column="65" selection-start-line="63" selection-start-column="65" selection-end-line="63" selection-end-column="65" />
+        <state relative-caret-position="1742">
+          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__stories___/index.stories.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2184">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
         </state>
       </provider>
     </entry>
