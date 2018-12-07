@@ -20,18 +20,14 @@ import network from './utils/network';
 
 function formatterTest(): Array<React.ReactNode> {
   return [
-    ['a', 'a'],
-    ['ab', 'ab'],
-    ['ac', 'ac'],
-    ['c', 'c-'],
-    ['abc', 'abc'],
-    ['abb', 'ab__b'],
+    ['1', '1 ('],
+    ['9', '(9'],
   ]
     .map((str: Array<string>, index: number): React.ReactNode => (
       <li key={index}>
         <b>
-          {Formatter.template(str[0], '#-#-#', 'a.#.#', 'ab__#', 'a#c', 'a#d')}
-        </b> ({str[0]} = {str[1]})
+          {Formatter.template(str[0], '(###) ###-####', '1 (###) ###-####')}
+        </b> [{str[0]} = {str[1]}]
       </li>
     ));
 }

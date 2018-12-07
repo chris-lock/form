@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8c544917-ce1c-4192-889f-7905927b5503" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__stories___/index.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/__stories___/index.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Fo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Fo.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,16 +24,16 @@
     <session id="-62901544">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.1" value="6" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -41,11 +42,11 @@
           <entry key="iml" value="1" />
           <entry key="java" value="1" />
           <entry key="js" value="55" />
-          <entry key="json" value="18" />
+          <entry key="json" value="19" />
           <entry key="md" value="1" />
           <entry key="npmrc" value="1" />
-          <entry key="ts" value="143" />
-          <entry key="tsx" value="209" />
+          <entry key="ts" value="145" />
+          <entry key="tsx" value="212" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -56,11 +57,11 @@
           <entry key="JSON" value="12" />
           <entry key="JavaScript" value="55" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Scratch" value="6" />
-          <entry key="TypeScript" value="140" />
-          <entry key="TypeScript JSX" value="207" />
+          <entry key="Scratch" value="7" />
+          <entry key="TypeScript" value="142" />
+          <entry key="TypeScript JSX" value="209" />
           <entry key="XML" value="1" />
-          <entry key="tsconfig" value="6" />
+          <entry key="tsconfig" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -68,8 +69,8 @@
           <entry key="js" value="1" />
           <entry key="json" value="46" />
           <entry key="md" value="80" />
-          <entry key="ts" value="6998" />
-          <entry key="tsx" value="12728" />
+          <entry key="ts" value="7733" />
+          <entry key="tsx" value="12768" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -77,26 +78,35 @@
           <entry key="JSON" value="39" />
           <entry key="JavaScript" value="1" />
           <entry key="Scratch" value="1891" />
-          <entry key="TypeScript" value="6998" />
-          <entry key="TypeScript JSX" value="10917" />
+          <entry key="TypeScript" value="7733" />
+          <entry key="TypeScript JSX" value="10957" />
           <entry key="tsconfig" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="TsLintLanguageService" value="12" />
-          <entry key="TypeScriptServerServiceImpl" value="15" />
+          <entry key="TsLintLanguageService" value="16" />
+          <entry key="TypeScriptServerServiceImpl" value="18" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/Fo.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="61" column="14" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="14" />
+            <state relative-caret-position="242">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Field/Input/TextInput/TextInput.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -104,17 +114,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/Formatter.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1742">
-              <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+            <state relative-caret-position="427">
+              <caret line="115" column="56" lean-forward="true" selection-start-line="115" selection-start-column="56" selection-end-line="115" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/__stories___/index.stories.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2184">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="407">
+              <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -123,7 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>value</find>
       <find>Inp</find>
       <find>Input</find>
       <find>onAu</find>
@@ -153,6 +162,7 @@
       <find>constru</find>
       <find>conso</find>
       <find>clear</find>
+      <find>as</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -212,7 +222,6 @@
         <option value="$PROJECT_DIR$/src/Node/FormManager.ts" />
         <option value="$PROJECT_DIR$/src/Clear/Clear.tsx" />
         <option value="$PROJECT_DIR$/src/Node/index.tsx" />
-        <option value="$PROJECT_DIR$/src/Field/Input/TextInput/TextInput.tsx" />
         <option value="$PROJECT_DIR$/src/Button/Button.tsx" />
         <option value="$PROJECT_DIR$/src/Button/Clear/index.tsx" />
         <option value="$PROJECT_DIR$/src/Button/index.tsx" />
@@ -225,12 +234,13 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.tsx" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.tsx" />
         <option value="$PROJECT_DIR$/tslint.json" />
-        <option value="$PROJECT_DIR$/src/__stories___/index.stories.tsx" />
         <option value="$PROJECT_DIR$/src/Node/Manager.ts" />
         <option value="$PROJECT_DIR$/src/Button/Submit/Submit.tsx" />
         <option value="$PROJECT_DIR$/src/Group/Group.tsx" />
+        <option value="$PROJECT_DIR$/src/Field/Input/TextInput/TextInput.tsx" />
         <option value="$PROJECT_DIR$/src/Field/index.tsx" />
         <option value="$PROJECT_DIR$/src/utils/Fo.ts" />
+        <option value="$PROJECT_DIR$/src/__stories___/index.stories.tsx" />
       </list>
     </option>
   </component>
@@ -286,58 +296,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="__stories___" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Button" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Field" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Node" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Default Changelist'; set:Default Changelist; class com.intellij.packageDependencies.ChangeListScope">
           <expand>
@@ -379,6 +337,97 @@
               <item name="Field" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Input" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="TextInput" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="__stories___" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Button" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Field" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Field" type="462c0819:PsiDirectoryNode" />
+              <item name="Input" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Field" type="462c0819:PsiDirectoryNode" />
+              <item name="Input" type="462c0819:PsiDirectoryNode" />
+              <item name="TelephoneInput" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Field" type="462c0819:PsiDirectoryNode" />
+              <item name="Input" type="462c0819:PsiDirectoryNode" />
+              <item name="TextInput" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Field" type="462c0819:PsiDirectoryNode" />
+              <item name="Selectable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Node" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
             </path>
           </expand>
           <select />
@@ -485,18 +534,21 @@
       <workItem from="1543850726577" duration="12440000" />
       <workItem from="1543887941513" duration="13901000" />
       <workItem from="1543939366269" duration="10140000" />
-      <workItem from="1543984732651" duration="7000" />
+      <workItem from="1543984732651" duration="30000" />
+      <workItem from="1544023561563" duration="735000" />
+      <workItem from="1544109589474" duration="4252000" />
+      <workItem from="1544150689520" duration="5634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125392000" />
+    <option name="totallyTimeSpent" value="136036000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="878" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19742489" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19313304" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -721,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.es5.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="1408" column="5" selection-start-line="1408" selection-start-column="5" selection-end-line="1408" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -735,21 +780,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Field/Input/TextInput/TextInput.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.tsx" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/wizard.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="117" column="60" lean-forward="true" selection-start-line="117" selection-start-column="60" selection-end-line="117" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../plated/app/_assets/js/components/forms/field/input/CreditCardInput.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -780,20 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/global.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="556">
@@ -815,13 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Field/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Node/Manager.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="611">
@@ -829,24 +839,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Fo.ts">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/wizard.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="61" column="14" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="14" />
+        <state relative-caret-position="509">
+          <caret line="71" column="35" lean-forward="true" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/global.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Field/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Field/Input/TextInput/TextInput.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="1268" column="4" selection-start-line="1268" selection-start-column="4" selection-end-line="1268" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/Formatter.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1742">
-          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+        <state relative-caret-position="427">
+          <caret line="115" column="56" lean-forward="true" selection-start-line="115" selection-start-column="56" selection-end-line="115" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Fo.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/__stories___/index.stories.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2184">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="407">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
         </state>
       </provider>
     </entry>
