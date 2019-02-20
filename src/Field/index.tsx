@@ -46,7 +46,7 @@ extends React.Component<Props, FieldState> {
   }
 
   public componentWillUnmount(): void {
-    this.props.manager.add(this);
+    this.props.manager.remove(this);
   }
 
   public reset(): void {

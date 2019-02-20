@@ -1,7 +1,5 @@
-import {
-  FormContext,
-} from '../Form';
 import Node, {
+  NodeContext,
   NodeProps,
   NodeState,
   NodeValue,
@@ -9,22 +7,49 @@ import Node, {
 import Manager from '../Node/Manager';
 
 interface GroupProps
-extends NodeProps, FormContext {
+extends NodeProps, NodeContext {
   name: string;
 }
 
-interface GroupState
-  extends NodeState {
+interface GroupState extends NodeState {
 }
 
-export default class Group<Props extends GroupProps, State extends GroupState>
-extends Node<Props, State> {
-  protected readonly manager: Manager = Manager.allValid(
-    (name: string, value: NodeValue): void => this.onUpdate(name, value)
-  );
+export default class Group
+extends Node<GroupProps, GroupState> {
+  public static getDerivedStateFromProps(
+    nextProps: Readonly<GroupProps>,
+    prevState: GroupState
+  ): Partial<GroupState> | null {
+    const nextState: Partial<GroupState> = {};
 
-  constructor(props: Props) {
-    super(props);
+    if (prevState.disabled !== nextProps.disabled) {
+      nextState.disabled = nextProps.disabled;
+    }
+
+    if (prevState.namespace !== nextProps.name) {
+      nextState.namespace = nextProps.name;
+    }
+
+    if (prevState.validating !== nextProps.validating) {
+      nextState.validating = nextProps.validating;
+    }
+
+    return (Object.keys(nextState).length)
+      ? nextState
+      : null;
+  }
+
+  public state: Readonly<GroupState> = {
+    disabled: this.props.disabled,
+    manager: this.manager(),
+    namespace: this.props.name,
+    validating: this.props.validating,
+  };
+
+  protected manager(): Manager {
+    return Manager.allValid((name: string, value: NodeValue): void =>
+      this.onUpdate(name, value)
+    );
   }
 
   private readonly onUpdate = (name: string, value: NodeValue): void => {
@@ -42,22 +67,10 @@ extends Node<Props, State> {
   }
 
   public readonly reset = (): void => {
-    this.manager.reset();
+    this.state.manager.reset();
   };
 
   public readonly validate = async (): Promise<boolean> => {
-    return this.manager.validate();
+    return this.state.manager.validate();
   };
-
-  protected disabled(): boolean {
-    return this.props.disabled;
-  }
-
-  protected namespace(): string {
-    return this.props.namespace;
-  }
-
-  protected validating(): boolean {
-    return this.props.validating;
-  }
 }

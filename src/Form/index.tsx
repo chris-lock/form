@@ -20,7 +20,7 @@ export interface OnFormSubmitResponse {
 
 export interface FormProps
 extends NodeProps {
-  namespace: string;
+  name: string;
   onSubmit?: () => Promise<void>;
   onSuccess?: (values: FormValues) => Promise<OnFormSubmitResponse>;
   onFailure?: () => Promise<void>;
@@ -28,8 +28,6 @@ extends NodeProps {
 
 export interface FormState
 extends NodeState {
-  disabled: boolean;
-  validating: boolean;
   values: FormValues;
   response?: OnFormSubmitResponse;
 }
@@ -39,35 +37,45 @@ extends NodeContext {}
 
 export default class Form
 extends Node<FormProps, FormState> {
+  public static getDerivedStateFromProps(
+    nextProps: Readonly<FormProps>,
+    prevState: FormState
+  ): Partial<FormState> | null {
+    if (prevState.namespace !== nextProps.name) {
+      return {
+        namespace: nextProps.name,
+      };
+    }
+
+    return null;
+  }
+
   public static withContext<
     Props extends FormContext,
     ExposedProps = Omit<Props, keyof FormContext>
   >(
-    component: React.ComponentClass<Props>
+    Component: React.ComponentType<Props>
   ): React.FunctionComponent<ExposedProps> {
-    const render: Render<React.ComponentType<Props>> = {
-      component,
-    };
     const wrapper: React.FunctionComponent<ExposedProps> = (
       props: ExposedProps
     ): React.ReactElement<{}> => (
       <Form.Context.Consumer>
         {(context: FormContext): React.ReactElement<{}> => (
-          <render.component {...props} {...context} />
+          <Component {...props} {...context} />
         )}
       </Form.Context.Consumer>
     );
-    wrapper.displayName = component.displayName;
+    wrapper.displayName = Component.displayName;
 
     return wrapper;
   }
 
-  protected readonly manager: Manager = Manager.allValid(
-    (name: string, value: NodeValue): void => this.onUpdate(name, value)
-  );
-
-  public readonly state: FormState = {
+  public state: Readonly<FormState> = {
     disabled: false,
+    manager: Manager.allValid((name: string, value: NodeValue): void =>
+      this.onUpdate(name, value)
+    ),
+    namespace: this.props.name,
     validating: false,
     values: {},
   };
@@ -104,7 +112,7 @@ extends Node<FormProps, FormState> {
       await this.props.onSubmit();
     }
 
-    const valid: boolean = await this.manager.validate();
+    const valid: boolean = await this.state.manager.validate();
 
     this.setState({
       validating: false,
@@ -135,17 +143,5 @@ extends Node<FormProps, FormState> {
     if (this.props.onFailure) {
       await this.props.onFailure();
     }
-  }
-
-  protected disabled(): boolean {
-    return this.state.disabled;
-  }
-
-  protected namespace(): string {
-    return this.props.namespace;
-  }
-
-  protected validating(): boolean {
-    return this.state.validating;
   }
 }

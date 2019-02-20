@@ -3,23 +3,23 @@ import React, {
 } from 'react';
 import Manager from './Manager';
 
-export interface NodeProps {
-}
-
-export interface NodeState {
-}
-
 export interface NodeValues {
   [key: string]: string | NodeValues;
 }
 
 export type NodeValue = string | NodeValues;
 
-export interface NodeContext {
+export interface NodeProps {
+}
+
+export interface NodeState {
   disabled: boolean;
   manager: Manager;
   namespace: string;
   validating: boolean;
+}
+
+export interface NodeContext extends NodeState {
 }
 
 export default abstract class Node<Props extends NodeProps, State extends NodeState>
@@ -33,28 +33,13 @@ extends React.Component<Props, State> {
     validating: false,
   });
 
-  protected abstract readonly manager: Manager;
+  public abstract state: Readonly<State>;
 
   public render(): React.ReactElement<{}> {
     return (
-      <Node.Context.Provider value={this.nodeContext()}>
+      <Node.Context.Provider value={this.state}>
         {this.props.children}
       </Node.Context.Provider>
     );
   }
-
-  private nodeContext(): NodeContext {
-    return {
-      disabled: this.disabled(),
-      manager: this.manager,
-      namespace: this.namespace(),
-      validating: this.validating(),
-    };
-  }
-
-  protected abstract disabled(): boolean;
-
-  protected abstract namespace(): string;
-
-  protected abstract validating(): boolean;
 }

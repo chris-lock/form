@@ -12,14 +12,14 @@ interface Managed {
 
 export default class Manager {
   public static allValid(managerOnUpdate: OnUpdate): Manager {
-    return new this(
+    return new Manager(
       managerOnUpdate,
       (responses: Array<boolean>): boolean => responses.every(Boolean)
     );
   }
 
   public static anyValid(managerOnUpdate: OnUpdate): Manager {
-    return new this(
+    return new Manager(
       managerOnUpdate,
       (responses: Array<boolean>): boolean => responses.some(Boolean)
     );
