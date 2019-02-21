@@ -56,15 +56,14 @@ extends React.Component<Props, FieldState> {
   public abstract async validate(): Promise<boolean>;
 
   public render(): React.ReactElement<{}> {
-    const render: Render<keyof JSX.IntrinsicElements> = {
-      component: (this.props.component as keyof JSX.IntrinsicElements) || 'div',
-    };
+    const Component: keyof JSX.IntrinsicElements
+      = (this.props.component as keyof JSX.IntrinsicElements) || 'div';
 
     return (
-      <render.component className={this.props.className}>
+      <Component className={this.props.className}>
         {this.renderLabel()}
         {this.renderField()}
-      </render.component>
+      </Component>
     );
   }
 
